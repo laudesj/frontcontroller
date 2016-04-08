@@ -8,3 +8,6 @@
 </VirtualHost>
 4- relancer apache
 5- editer avec le bloc-note en mode administrateur le fichier hosts (dans C:\Windows\System32\drivers\etc)
+ajouter :
+127.0.0.1		fc
+127.0.0.1		www.fc
