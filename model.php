@@ -1,7 +1,7 @@
 <?php
 
 function open_database_connection() {
-	$dbh = new PDO("mysql:host=localhost;dbname=blog", 'root', '');
+	$dbh = new PDO("mysql:host=localhost;dbname=blogfc", 'root', '');
 	return $dbh;
 }
 
@@ -18,4 +18,14 @@ function get_all_posts() {
 	}
 	close_database_connection($link);
 	return $posts;
+}
+
+function get_post_by_id($id)
+{
+	$link = open_database_connection();
+	$id = intval($id);
+	$result = $link->query('SELECT titre, corps FROM post WHERE id = '.$id);
+	$row = $result->fetch(PDO::FETCH_ASSOC);
+	close_database_connection($link);
+	return $row;
 }
