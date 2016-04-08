@@ -4,7 +4,7 @@ function list_action() {
 	require 'templates/list.php';
 }
 
-function show_action() {
+function show_action($id) {
 	$post = get_post_by_id($id);
 	require 'templates/show.php';
 }

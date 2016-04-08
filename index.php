@@ -5,9 +5,10 @@ require_once 'controllers.php';
 
 // "routes"
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-if('/index.php/liste' === $uri) {
+echo "<small>route = $uri</small><br>";
+if('/index.php' === $uri) {
 	list_action();
-} elseif ('index.php/show' === $uri && isset($_GET['id'])) {
+} elseif ('/index.php/show' === $uri && isset($_GET['id'])) {
 	show_action($_GET['id']);
 } else {
 	header('Status: 404 Not Found');

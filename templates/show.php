@@ -1,4 +1,4 @@
-<?php $title = $post['titre'] ?>
+<?php $titre = $post['titre'] ?>
 <?php ob_start() ?>
 <h1><?php echo $post['titre'] ?></h1>
 <div class="body">

@@ -24,7 +24,7 @@ function get_post_by_id($id)
 {
 	$link = open_database_connection();
 	$id = intval($id);
-	$result = $link->query('SELECT titre, corps FROM post WHERE id = '.$id);
+	$result = $link->query('SELECT titre, corps FROM posts WHERE id = '.$id);
 	$row = $result->fetch(PDO::FETCH_ASSOC);
 	close_database_connection($link);
 	return $row;
