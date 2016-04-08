@@ -5,14 +5,11 @@
 </head>
 <body>
 	<ul>
-		<?php
-			while($ligne = $result->fetch(PDO::FETCH_ASSOC)): ?>
+		<?php foreach ($posts as $post): ?>
 			<li>
-				<a href="/detail.php?id=<?= $ligne['id']?>">
-					<?= $ligne['titre'] ?>
-				</a>
+			<a href="/show?id=<?= $post['id'] ?>"><?= $post['titre']?></a>
 			</li>
-		<?php endwhile ?>
+		<?php endforeach ?>
 	</ul>
 </body>
 </html>
