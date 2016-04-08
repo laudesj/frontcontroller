@@ -7,4 +7,4 @@
     ServerAlias www.fc
 </VirtualHost>
 4- relancer apache
-5- editer avec le bloc-note en mode administrateur le fichier host (dans C:\Windows\System32\drivers\etc)
+5- editer avec le bloc-note en mode administrateur le fichier hosts (dans C:\Windows\System32\drivers\etc)
