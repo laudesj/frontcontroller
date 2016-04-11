@@ -7,5 +7,6 @@
 		</li>
 	<?php endforeach ?>
 </ul>
+<a href="/index.php/poster">Poster un nouveau post</a>
 <?php $content = ob_get_clean() ?>
 <?php include "layout.php" ?>

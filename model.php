@@ -29,3 +29,13 @@ function get_post_by_id($id)
 	close_database_connection($link);
 	return $row;
 }
+
+function poster($titre, $corps) {
+	$link = open_database_connection();
+	$stmt = $link->prepare("INSERT INTO posts (titre, corps) VALUES (:titre, :corps)");
+	$stmt->bindValue(':titre', $titre);
+	$stmt->bindValue(':corps', $corps);
+	$result = $stmt->execute();
+	close_database_connection($link);
+	return $result;
+}
