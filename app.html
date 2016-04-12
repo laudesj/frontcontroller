@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button>Récup&eacute;rer les posts du site frontcontroller via un webservice</button>
+<div id="resultats">...</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+(function() {
+  var frontcontrollerAPI = "http://fc/index.php/api/posts";
+  $.getJSON( frontcontrollerAPI, function( data ) {
+  	var items = [];
+  	$.each( data, function( key, val ) {
+    	items.push( "<li id='" + key + "'>" + val + "</li>" );
+    });
+  });
+  console.dir(items);
+})();
+
+</script>
+</body>
+</html>

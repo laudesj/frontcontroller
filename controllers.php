@@ -20,4 +20,19 @@ function poster_post_action() {
 	}
 	require 'templates/merci.php';
 }
+
+
+// fonctions de l'api
+
+function posts_api() {
+	$posts = get_all_posts();
+	$a = array();
+	foreach ($posts as $post) {
+		$a[] = $post;
+	}
+	$json = json_encode($a);
+	echo $json;
+}
+
+
 ?>
